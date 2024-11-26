@@ -1,0 +1,9 @@
+.input{
+    padding: var(--sp-xs);
+    width: 50%;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+}
+.input:focus{
+    outline: none;
+}

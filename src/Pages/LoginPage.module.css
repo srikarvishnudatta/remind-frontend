@@ -1,0 +1,18 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.login p{
+    color: var(--primary-lt);
+}
+.login a{
+    text-decoration: none;
+    font-weight: 700;
+}
+.login a:active{
+    color: var(--primary-dark);
+}
+.login a:visited{
+    color: var(--primary-dark);
+}

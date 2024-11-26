@@ -1,0 +1,57 @@
+:root{
+    --primary: #344955;
+    --primary-dark: #232F34;
+    --primary-lt: #4A6572;
+    --secondary: #F9AA33;
+    --secondary-lt: #fcd69c;
+
+    --font-robo: "Roboto";
+    --font-anton: "Anton SC";
+    /*font sizes*/
+    --ft-sm: 1rem;
+    --ft-md: 2rem;
+    --ft-lg: 2.7rem;
+    /*Spacing*/
+    --sp-xs: 12px;
+    --sp-sm:20px;
+    --sp-md:24px;
+    --sp-lg:32px;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+h1, h2, h3, h4{
+    font-family: var(--font-anton), sans-serif;
+    color: var(--primary-dark);
+}
+body{
+    font-family: var(--font-robo), sans-serif;
+    color: var(--primary-dark);
+}
+h1{
+    font-size: var(--ft-lg);
+}
+.background{
+    height: 100vh;
+    background: rgb(255,196,106);
+    background: linear-gradient(184deg, rgba(255,196,106,1) 0%, rgba(255,227,185,1) 35%, rgba(255,255,255,1) 100%);
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.card{
+    max-width: min(calc(100% - 40px), 58rem);
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--sp-md);
+    background: #fff;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    width: 100%;
+    box-shadow: 1px 1px 1px 1px #4A6572;
+}
+
