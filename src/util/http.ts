@@ -1,10 +1,16 @@
-import {User} from "@/types/types.ts";
+import {NewUser, User} from "@/types/types.ts";
 
-export async function login(data: User){
-    const response = await fetch("http://localhost:8081", {
-        method: 'POST',
-        headers: {"Content-type":"application/json"},
-        body: JSON.stringify(data)
-    });
-    return await response.json();
+export async function createAccount(newUser: NewUser){
+    const res = await fetch('http://localhost:8080/create', {
+        method:"POST",
+        body: JSON.stringify(newUser)
+    })
+    console.log(res)
+}
+async function login(user: User){
+    const res = await fetch('http://localhost:8080/login', {
+        method:"POST",
+        body: JSON.stringify(user)
+    })
+    console.log(res)
 }
