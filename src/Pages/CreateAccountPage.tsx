@@ -10,6 +10,7 @@ import {createAccount} from "@/util/http.ts";
 import {useMutation} from "@tanstack/react-query";
 
 export default function CreateAccountPage() {
+
     const {mutate} = useMutation({mutationFn: createAccount})
 
 
