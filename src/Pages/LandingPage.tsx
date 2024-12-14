@@ -6,13 +6,13 @@ import logo from "../assets/google-logo.png"
 import umbrella from "../assets/umbrella.png"
 import {NavLink} from "react-router-dom";
 import {useMutation} from "@tanstack/react-query";
-import {createAccount} from "@/util/http.ts";
+import {login} from "@/util/http.ts";
 import {FormEvent} from "react";
 
 
 export function LandingPage(){
 
-    const {mutate, isError} = useMutation({mutationFn: createAccount})
+    const {mutate, isError} = useMutation({mutationFn: login})
 
 
     function submitHandler(event: FormEvent<HTMLFormElement>){
@@ -46,7 +46,7 @@ export function LandingPage(){
                         <Input name={"username"} placeholder={"Email"} className={`${errStyles}`}/>
                         <Input name={"password"} placeholder={"Password"}/>
 
-                        <Button variant={"outline"} className={"bg-[#6153BD] text-slate-50 p-5"}>Login</Button>
+                        <Button variant={"outline"} className={"bg-customPurple text-slate-50 p-5"}>Login</Button>
                         <p className={"text-left"}>Forgot your password? <span
                             className={"text-[#6153BD] underline underline-offset-2"}>Click here</span></p>
                         <p className={"text-left text-[#6153BD] underline underline-offset-2"}><NavLink to={"/create"}>Join us today</NavLink></p>

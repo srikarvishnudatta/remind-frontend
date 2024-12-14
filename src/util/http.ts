@@ -8,7 +8,7 @@ export async function createAccount(newUser: NewUser){
     })
     console.log(res)
 }
-async function login(user: User){
+export async function login(user: User){
     const res = await fetch(url + 'auth/login', {
         method:"POST",
         body: JSON.stringify(user)

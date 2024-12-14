@@ -44,7 +44,7 @@ export default function CreateAccountPage() {
                         <Input name={"firstName"} placeholder={"First Name"}/>
                         <Input name={"lastName"} placeholder={"Last Name"}/>
                     </div>
-                    <Button variant={"outline"} className={"bg-[#6153BD] text-slate-50 p-5"}>Submit</Button>
+                    <Button variant={"outline"} className={"bg-customPurple text-slate-50 p-5"}>Submit</Button>
                     <p className={"text-left"}>Already with us? <span
                         className={"text-[#6153BD] underline underline-offset-2"}><NavLink to={"/"}>Click here</NavLink></span></p>
                     <div className={"border-2 border-solid flex items-center gap-2 p-2 border-black"}>
