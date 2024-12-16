@@ -1,16 +1,18 @@
-import {Outlet} from "react-router-dom";
+import {NavLink, Outlet} from "react-router-dom";
 import umbrella from "@/assets/umbrella.png";
 import {Button} from "@/components/ui/button.tsx";
 import {FileClock, Heart, History, TimerOff, Trash2, Plus} from "lucide-react";
 const options = [
-    {name:'Recently added', icon: FileClock},
-    {name: 'Expiring soon', icon: History },
-    {name: 'Favourites', icon: Heart},
-    {name: 'Expired', icon: TimerOff},
-    {name: 'Trash', icon: Trash2}
+    {name: 'Dashboard', icon: FileClock, link: '/dashboard'},
+    {name:'Recently added', icon: FileClock, link:'/recent'},
+    {name: 'Expiring soon', icon: History, link: '/soon' },
+    {name: 'Favourites', icon: Heart, link: '/favourites'},
+    {name: 'Expired', icon: TimerOff, link: '/expired'},
+    {name: 'Trash', icon: Trash2, link: '/trash'}
 ]
 
 function HomeLayout(){
+
     return <div>
         {/*logo and website*/}
         <nav className={'p-3 flex justify-between'}>
@@ -32,9 +34,9 @@ function HomeLayout(){
                 <ul className={'flex flex-col gap-4 pl-4 pt-2'}>
                     <Button className={'bg-customPurple w-1/2 ml-10 self-left text-slate-50 hover:text-black hover:outline'}><Plus/>Add new</Button>
                     {options.map((option, index) =>
-                        <li key={index} className={'flex gap-3 cursor-pointer'}>
+                        <NavLink to={option.link} key={index} className={'flex gap-3 cursor-pointer'}>
                             <option.icon/>
-                            {option.name}</li>)}
+                            {option.name}</NavLink>)}
                 </ul>
             </section>
             <section className={'w-5/6'}>
